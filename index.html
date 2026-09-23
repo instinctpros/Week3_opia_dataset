@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OPIA is a p5.js universe of loneliness, connection, and radical honesty.">
+  <title>OPIA — Atlas of Loneliness</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307122d'/%3E%3Cpath d='M32 8l5.5 18.5L56 32l-18.5 5.5L32 56l-5.5-18.5L8 32l18.5-5.5z' fill='%23f6cf74'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23fff7d6'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="site-header">
+      <div class="brand-lockup">
+        <h1>OPIA</h1>
+        <p class="eyebrow">Atlas of Loneliness</p>
+      </div>
+      <button id="sound-toggle" class="sound-button" type="button" aria-pressed="false" aria-label="Turn sound on" title="Turn sound on">
+        <span aria-hidden="true">♪</span>
+      </button>
+    </header>
+
+    <section class="experience" aria-label="Loneliness data universe">
+      <div id="canvas-wrap" class="canvas-wrap">
+        <div id="p5-canvas" role="img" aria-label="A night sky containing age, identity, race, income, and location constellations"></div>
+      </div>
+
+      <details id="entry-drawer" class="entry-drawer">
+        <summary>Enter the constellation</summary>
+        <div class="entry-panel">
+          <label for="connection-slider">
+            How connected do you feel?
+            <span id="connection-value">50</span>
+          </label>
+          <input id="connection-slider" type="range" min="0" max="100" value="50">
+          <div class="range-labels"><span>alone</span><span>connected</span></div>
+
+          <label for="feeling-select">What feels closest?</label>
+          <select id="feeling-select">
+            <option>lonely</option>
+            <option>numb</option>
+            <option>anxious</option>
+            <option>grieving</option>
+            <option>hopeful</option>
+            <option>connected</option>
+            <option>something else</option>
+          </select>
+
+          <label for="age-select">Age</label>
+          <select id="age-select">
+            <option>18–34</option>
+            <option>35–49</option>
+            <option>50–64</option>
+            <option>65+</option>
+          </select>
+
+          <label for="identity-select">Identity point</label>
+          <select id="identity-select">
+            <option>Women</option>
+            <option>Men</option>
+            <option>Lesbian</option>
+            <option>Gay</option>
+            <option>Bisexual</option>
+            <option>Transgender woman</option>
+            <option>Transgender man</option>
+            <option>Gender nonconforming</option>
+          </select>
+
+          <label for="race-select">Race or ethnicity</label>
+          <select id="race-select">
+            <option>Black</option>
+            <option>Hispanic or Latino</option>
+            <option>Multiracial</option>
+            <option>American Indian / Alaska Native</option>
+            <option>Asian</option>
+            <option>White</option>
+          </select>
+
+          <label for="income-select">Household income</label>
+          <select id="income-select">
+            <option>Under $25K</option>
+            <option>$25K–$49K</option>
+            <option>$50K–$74K</option>
+            <option>$75K–$99K</option>
+            <option>$100K–$149K</option>
+            <option>$150K+</option>
+          </select>
+
+          <label for="location-select">Place</label>
+          <select id="location-select">
+            <option>City</option>
+            <option>Suburb</option>
+            <option>Small town</option>
+            <option>Rural area</option>
+          </select>
+
+          <label for="truth-input">What have you not said out loud?</label>
+          <textarea id="truth-input" maxlength="180" rows="3" placeholder="Right now, the truth is…"></textarea>
+
+          <button id="enter-button" class="enter-button" type="button">Become a star</button>
+          <p id="entry-message" class="entry-message" role="status"></p>
+        </div>
+      </details>
+
+      <div class="aurora-key" aria-label="Aurora color guide: warm colors indicate greater loneliness and cool colors indicate greater connection">
+        <span>loneliness</span>
+        <i aria-hidden="true"></i>
+        <span>connection</span>
+      </div>
+
+      <a class="source-note" href="https://www.cdc.gov/mmwr/volumes/73/wr/mm7324a1.htm" target="_blank" rel="noreferrer">CDC BRFSS · 2022 · 26 states</a>
+    </section>
+  </main>
+
+  <noscript>This constellation requires JavaScript.</noscript>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.13/lib/p5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.13/lib/addons/p5.sound.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "title": "CDC BRFSS loneliness prevalence by demographic group",
+    "year": 2022,
+    "geography": "26 participating U.S. states",
+    "definition": "Percent responding always, usually, or sometimes to: How often do you feel socially isolated from others?",
+    "source": "https://www.cdc.gov/mmwr/volumes/73/wr/mm7324a1.htm"
+  },
+  "groups": {
+    "age": [
+      {"label":"18–34","value":43.3,"low":42.2,"high":44.3},
+      {"label":"35–49","value":31.9,"low":31.0,"high":32.9},
+      {"label":"50–64","value":27.8,"low":27.0,"high":28.7},
+      {"label":"65+","value":23.8,"low":23.1,"high":24.5}
+    ],
+    "identity": [
+      {"label":"Women","value":33.5,"low":32.8,"high":34.1,"note":"Reported in the CDC sex category"},
+      {"label":"Men","value":30.7,"low":30.0,"high":31.3,"note":"Reported in the CDC sex category"},
+      {"label":"Lesbian","value":44.8,"low":40.5,"high":49.2},
+      {"label":"Gay","value":41.2,"low":37.5,"high":45.1},
+      {"label":"Bisexual","value":56.7,"low":54.1,"high":59.3},
+      {"label":"Transgender woman","value":56.4,"low":42.4,"high":69.5},
+      {"label":"Transgender man","value":62.6,"low":54.6,"high":70.0},
+      {"label":"Gender nonconforming","value":63.9,"low":55.9,"high":71.3}
+    ],
+    "race": [
+      {"label":"Black","value":36.4,"low":34.7,"high":38.0},
+      {"label":"Hispanic or Latino","value":37.5,"low":35.9,"high":39.1},
+      {"label":"Multiracial","value":40.1,"low":37.2,"high":43.0},
+      {"label":"American Indian / Alaska Native","value":37.9,"low":31.7,"high":44.5},
+      {"label":"Asian","value":32.0,"low":29.1,"high":35.0},
+      {"label":"White","value":29.6,"low":29.1,"high":30.1}
+    ],
+    "income": [
+      {"label":"Under $25K","value":47.9,"low":46.3,"high":49.4},
+      {"label":"$25K–$49K","value":36.2,"low":35.2,"high":37.2},
+      {"label":"$50K–$74K","value":30.4,"low":29.3,"high":31.6},
+      {"label":"$75K–$99K","value":27.0,"low":25.8,"high":28.3},
+      {"label":"$100K–$149K","value":23.6,"low":22.5,"high":24.8},
+      {"label":"$150K+","value":21.2,"low":20.2,"high":22.3}
+    ],
+    "location": [
+      {"label":"City","contextOnly":true},
+      {"label":"Suburb","contextOnly":true},
+      {"label":"Small town","contextOnly":true},
+      {"label":"Rural area","contextOnly":true}
+    ]
+  }
+}
